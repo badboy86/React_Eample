@@ -5,7 +5,7 @@ class Info extends React.Component {
 		const pers = this.props.personne;
 		return (
 			<div className="personne">
-				<h1>Infos personne</h1>
+				<h1>- Informations de la personne -</h1>
 				<label>Nom : </label>
 				<input type="text" value={pers.Name} />
 				<label>Age : </label>
