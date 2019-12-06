@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import './app.scss';
 
 class HomeFrm extends React.Component {
 	render() {
@@ -6,17 +8,22 @@ class HomeFrm extends React.Component {
 		return (
 			<div>
 				<h1>Home page (Super Application :) )</h1>
-				<button
-					onClick={e => {
-						e.preventDefault();
-						e.stopPropagation();
-						func.setState({ location: 'create' });
-					}}
-				>
-					Create
-				</button>
-				<br />
-				<button
+				<span className="buttonMargin">
+					<Button
+						variant="contained"
+						color="primary"
+						onClick={e => {
+							e.preventDefault();
+							e.stopPropagation();
+							func.setState({ location: 'create' });
+						}}
+					>
+						Create
+					</Button>
+				</span>
+				<Button
+					variant="contained"
+					color="primary"
 					onClick={e => {
 						e.preventDefault();
 						e.stopPropagation();
@@ -24,7 +31,7 @@ class HomeFrm extends React.Component {
 					}}
 				>
 					Contact
-				</button>
+				</Button>
 			</div>
 		);
 	}

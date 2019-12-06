@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import './app.scss';
 
 class ContactFrm extends React.Component {
 	render() {
@@ -10,7 +12,9 @@ class ContactFrm extends React.Component {
 				<br />
 				<input type="text"></input>
 				<br />
-				<button
+				<Button
+					variant="contained"
+					color="primary"
 					onClick={e => {
 						e.preventDefault();
 						e.stopPropagation();
@@ -18,7 +22,7 @@ class ContactFrm extends React.Component {
 					}}
 				>
 					retour
-				</button>
+				</Button>
 			</div>
 		);
 	}
